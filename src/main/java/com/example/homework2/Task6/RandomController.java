@@ -10,10 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class RandomController {
 
-    private final SecondBean secondBean;
+    private final RandomBean randomBean;
 
     @GetMapping
-    private int getRandomNumber() {
-        return secondBean.getRandomNumber();
+    private void getRandomNumber() {
+        System.out.println(randomBean.getRandomNumber());
     }
+
+    // Каждый раз при запросе возвращается одно и то же число.
+    // Объясняется тем, что бин RandomBean инициализируется только один раз,
+    // когда его запрашивают впервые
+    // Component, по дефолту синглтон и поэтому на все запросы возвращается один и тот же бин,
+    // соответственно одно и то же значение
 }
