@@ -3,9 +3,10 @@ package com.example.homework2.Task2;
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;
 
+@Getter
 public class MyEvent extends ApplicationEvent {
 
-    @Getter
+
     private String message;
 
     public MyEvent(Object source, String message) {

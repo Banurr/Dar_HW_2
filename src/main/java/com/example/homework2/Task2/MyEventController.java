@@ -13,7 +13,8 @@ public class MyEventController {
     private MyEventPublisher myEventPublisher;
 
     @GetMapping
-    public void event() {
+    public String event() {
         myEventPublisher.publishEvent(new MyEvent(this ,"hello event"));
+        return "See the console";
     }
 }

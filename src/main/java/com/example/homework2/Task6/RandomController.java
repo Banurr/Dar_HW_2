@@ -13,8 +13,9 @@ public class RandomController {
     private final RandomBean randomBean;
 
     @GetMapping
-    private void getRandomNumber() {
-        System.out.println(randomBean.getRandomNumber());
+    private String getRandomNumber() {
+        System.out.println("Random number = " + randomBean.getRandomNumber());
+        return "See the console";
     }
 
     // Каждый раз при запросе возвращается одно и то же число.

@@ -1,6 +1,5 @@
 package com.example.homework2.Task6;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
